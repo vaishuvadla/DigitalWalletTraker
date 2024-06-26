@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and signUp Form</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+</head>
+<style>
+
+    @import url('https://fonts.googleapis.com/css2/?family=poppins:wgt@400;600&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:"poppins", sans-serif;
+}
+body{
+    background-color: #dfe9f5;
+}
+.wrapper{
+    width:800px;
+    padding:2rem 1rem;
+    margin:50px auto;
+    background-color:#fff;
+    border-radius: 10px;
+    text-align:center;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+h1{
+    font-size: 2rem;
+    color:#07001f;
+    margin-bottom: 1.2rem;
+}
+form input{
+    width:92%;
+    outline:none;
+    border:1px solid #fff;
+    padding:12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+}
+#button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding:10px 0px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    color:#fff;
+    background: rgb(17,107,143);
+}
+#button:hover{
+    background: rgba(17,107,143,0.877);
+}
+input:focus{
+    border:1px solid rgb(192,192,192);
+
+}
+.recover{
+    text-align: right;
+    font-size: 0.7rem;
+    margin: o.3rem 1.4rem 0 0;
+}
+.recover a{
+    text-decoration: none;
+    color: #464647;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+    background-color: #e0e0e0;
+}
+<!-- .query-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+} -->
+ .query-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:200px;
+    height:220px;
+    
+    background-color:darkgrey;
+    opacity: 0.9;
+    margin-left:10px;
+
+}
+.query-box1{
+    display:inline-flex;
+    margin-left:200px;
+}
+.query-box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.query-box p {
+    margin: 0;
+}
+.query-box a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.query-box a:hover {
+    color: #0056b3;
+} 
+
+
+
+
+
+
+</style>
+
+<body>
+    
+    <div class="wrapper">
+    <h1>Welcome To</h1>
+    <h1><b>DIGITAL WALLET TRACKER</b></h1>
+    <p>Want to check your details ??</p><br>
+    <form action="upi_php.php" method="post">
+        <label for="userId"><b>User ID:</b></label>
+        <input type="text" id="userId" name="userId" placeholder="enter your id">
+        <input type="submit" value="Submit" id="button">
+    </form>
+    </div>
+    <div class="query-box1">
+    <div class="query-box">
+        <h3>1. Average Transaction Amount for Each User</h3>
+        <p><a href="display_results.php?query=1">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>2. Total Amount Spent by Users in Each Occupation</h3>
+        <p><a href="display_results.php?query=2">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>3. Most Common Transaction Method Used by Users</h3>
+        <p><a href="display_results.php?query=3">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>4. Total Amount Spent by Each User (Ordered by Total Spent Amount)</h3>
+        <p><a href="display_results.php?query=4">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>5. Top 5 Users with the Highest Credit Limits</h3>
+        <p><a href="display_results.php?query=5">View Results</a></p>
+    </div>
+    </div>
+    <br><br><br><br>
+    <div class="query-box1">
+    <div class="query-box">
+        <h3>6. Total Transactions Amount and Available Credit per User</h3>
+        <p><a href="display_results.php?query=6">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>7. Total Transactions Amount and Balance per Account</h3>
+        <p><a href="display_results.php?query=7">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>8. Total Transactions Count and Amount by Transaction Date</h3>
+        <p><a href="display_results.php?query=8">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>9. Top 5 Users with the Highest Debit Limits</h3>
+        <p><a href="display_results.php?query=9">View Results</a></p>
+    </div>
+    <div class="query-box">
+        <h3>10. Total Amount Spent by Each User (Ordered by Total Spent Amount)</h3>
+        <p><a href="display_results.php?query=10">View Results</a></p>
+    </div>
+    </div>
+
+</body>
+
+
+
+<!-- <body>
+    <div class='wrapper'>
+        <h1>Welcome To</h1>
+        <h1><b>DIGITAL WALLET TRACKER</b></h1>
+        <p>Want to check your details ??</p><br>
+        <form action="#">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Password">
+            <input type="text" placeholder="re-enter password">
+        </form>
+        <div class="terms">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I agree to these <a href="#">Terms and condition</a></label>
+        </div>
+        <button>Login</button>
+        <div class="member">
+            Already a member?<a href="./login.html">Login Here</a>
+        </div>
+    </div>
+</body> -->
+</html>
